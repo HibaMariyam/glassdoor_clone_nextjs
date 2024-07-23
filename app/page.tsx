@@ -6,6 +6,7 @@ import { ImPower } from "react-icons/im";
 import NavBar from "./_components/NavBar";
 import JobList from "./_components/JobList";
 import { BsStars } from "react-icons/bs";
+import { IoLocationOutline } from "react-icons/io5";
 
 export default async function Home() {
   const jobs: Job[] = await fetch('https://job.kunjappu.online/api/portal-jobs').then((res) => res.json());
@@ -17,16 +18,26 @@ export default async function Home() {
     <div className="w-[100vw] h-[100vh] bg-white p-6 overflow-hidden ">
       <NavBar />
       <div className='flex flex-col gap-3 text-center h-full'>
-        <div className="flex items-center bg-gray-100 p-1 rounded-xl h-10 w-full mb-3">
-          <span className="text-gray-300 mr-2 text-lg">
-            <IoMdSearch className='ml-1' />
-          </span>
-          <input
-            type="text"
-            className="bg-transparent outline-none text-gray-900 text-sm placeholder-gray-400 w-full"
-            placeholder="Search jobs here..."
-          />
+        <div className="w-full px-96 flex flex-row gap-1">
+          <div className=" flex flex-row items-center bg-gray-100 p-1 rounded-tl-3xl rounded-bl-3xl h-10 w-2/3 mb-3">
+            <span className="text-gray-400 mr-2 text-lg">
+              <IoMdSearch className='ml-1' />
+            </span>
+            <input
+              type="text"
+              className="bg-transparent outline-none text-gray-900 text-sm placeholder-gray-400 w-full"
+              placeholder="Search jobs here..."
+            />
+          </div>
+          <div className=" flex flex-row items-center bg-gray-100 py-1 px-3 rounded-tr-3xl rounded-br-3xl h-10 w-1/3 mb-3 text-sm text-gray-400">
+            <span className="text-gray-400 mr-2 text-lg">
+              <IoLocationOutline />
+            </span>
+            Location
+          </div>
+
         </div>
+
         <h1 className='text-sm flex flex-row text-green-700 font-medium text-center justify-center items-center mb-2'>
           <span className="text-green-700 mr-2 text-xs"><ImPower /></span>
           Upload your CV-let employers find you
@@ -37,10 +48,7 @@ export default async function Home() {
             <p>Search</p>
             <p>Your Activity</p>
           </div>
-          {/* <div className="text-black flex flex-row bg-gray-100 rounded-lg px-4 py-2 items-center text-xs font-medium hover:bg-gray-200">
-            <IoMdNotifications />
-            <span className="flex flex-row text-nowrap ml-2">Create job alert</span>
-          </div> */}
+
         </div>
         <hr className='w-full' />
         <div className="flex flex-row w-full gap-5 h-full overflow-hidden">
