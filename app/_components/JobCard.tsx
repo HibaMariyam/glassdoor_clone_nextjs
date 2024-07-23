@@ -44,7 +44,7 @@ const JobCard = ({ job, selectedJob, setSelectedJob }: {
                         }
                     </p>
                 </div>
-                <div className='text-xs  flex flex-row items-center text-gray-700 text-start'><span><LiaRupeeSignSolid /></span>{job.salary}</div>
+                <div className='text-xs  flex flex-row items-center text-gray-700 text-start'><span><LiaRupeeSignSolid /></span>{job.salary}<span className='ml-1 text-xs'>LPA</span></div>
 
             </div>
             {!selected &&
