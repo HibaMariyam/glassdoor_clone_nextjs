@@ -31,5 +31,11 @@ interface Job {
     user: User;
 }
 
+interface NewUser {
+    name: string;
+    email: string;
+    password: string;
+    password_confirmation: string;
+}
 
 

@@ -36,7 +36,9 @@ export default async function Home() {
             Location
           </div>
 
+
         </div>
+        {/* <button className="text-black bg-gray-100 p-2 rounded-lg w-20">Add Job</button> */}
 
         <h1 className='text-sm flex flex-row text-green-700 font-medium text-center justify-center items-center mb-2'>
           <span className="text-green-700 mr-2 text-xs"><ImPower /></span>
@@ -51,7 +53,7 @@ export default async function Home() {
 
         </div>
         <hr className='w-full' />
-        <div className="flex flex-row w-full gap-5 h-full overflow-hidden">
+        <div className="flex flex-row w-full gap-5 h-full overflow-hidden px-20 pt-3">
           {/* <div className="flex flex-col w-1/3 h-full gap-3 overflow-y-auto pb-20">
             {jobs.map((job) => (
               <JobCard key={job.id} job={job} selectedJob={selectedJob} setSelectedJob={setSelectedJob} />

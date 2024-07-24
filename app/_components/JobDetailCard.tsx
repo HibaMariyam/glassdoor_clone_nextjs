@@ -19,16 +19,16 @@ const JobDetailCard = ({ job }: { job: Job }) => {
 
     const shortDescription = job.description.slice(0, 100) + '...';
     return (
-        <div className="flex flex-col   border border-gray-300 h-full pl-10  pr-10 pt-10 pb-20 rounded-lg w-full overflow-y-auto">
+        <div className="flex flex-col   border border-gray-300 h-full pl-6  pr-6 pt-6 pb-20 rounded-lg w-full overflow-y-auto">
             <div className='flex flex-row w-full items-center'>
                 <div className='flex flex-row items-center'>
-                    <div className='rounded-full border border-gray-300 h-12 w-12 mr-3'>
-                        <Image src={job.company.logo} alt="logo" width={100} height={130} className='object-cover rounded-full' />
+                    <div className='rounded-full border border-gray-300 h-10 w-10 mr-3'>
+                        <Image src={job.company.logo} alt="logo" width={100} height={100} className='object-cover rounded-full' />
                     </div>
                     <div className='flex flex-row justify-between items-center'>
-                        <div className='flex flex-row text-md text-black font-semibold'>
+                        <div className='flex flex-row text-md text-black font-medium'>
                             <p className='mr-3'>{job.company.name}</p>
-                            <p className='flex flex-row gap-1 items-center'>4.4 <span className='opacity-70  mb-1'><IoIosStar size={12} /></span></p>
+                            <p className='flex flex-row gap-1 items-center font-medium text-xs'>4.4 <span className='opacity-70  mb-1'><IoIosStar size={12} /></span></p>
                         </div>
                     </div>
 
@@ -50,8 +50,8 @@ const JobDetailCard = ({ job }: { job: Job }) => {
 
 
             </div>
-            <p className='text-gray-900 text-sm text-start mt-4'>{job.location}</p>
-            <p className='text-gray-900 text-sm text-start mt-2 '> {isDescriptionExpanded ? job.description : shortDescription}</p>
+            <p className='text-gray-900 text-sm text-start '>{job.location}</p>
+            <p className='text-gray-900 text-sm text-start mt-10 '> {isDescriptionExpanded ? job.description : shortDescription}</p>
             <p className='flex flex-row text-green-700 text-sm text-start items-center font-semibold mt-5'
                 onClick={toggleDescription}
             >Show more <span className='ml-3' ><MdKeyboardArrowDown size={25} /></span></p>

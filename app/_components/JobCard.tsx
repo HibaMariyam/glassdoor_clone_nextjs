@@ -36,7 +36,7 @@ const JobCard = ({ job, selectedJob, setSelectedJob }: {
                 </div>
                 <p className='text-sm font-semibold text-black text-start'>{job.title}</p>
                 <div className='flex flex-row justify-between text-xs text-gray-700'>
-                    <p>{job.location}</p>
+                    <p className='font-medium'>{job.location}</p>
 
                     <p>
                         {

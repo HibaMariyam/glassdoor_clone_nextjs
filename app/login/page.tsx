@@ -61,6 +61,8 @@ const LoginPage = () => {
 
         <button className='bg-green-500 opacity-80 hover:opacity-100 p-3 rounded-lg w-full text-white' form='login' type='submit'>Login</button>
 
+        <p className='text-gray-500 text-xs font-semibold flex flex-row justify-end mt-6'>Don't have an account?<span><button className='text-green-500 font-semibold text-xs ml-2' onClick={() => router.push('/signup')}>Sign Up</button></span></p>
+
       </form>
 
 
